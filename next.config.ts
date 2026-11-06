@@ -2,8 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Blogs and images live in /content; include them in the Vercel serverless bundle
+  outputFileTracingIncludes: {
+    "/*": ["./content/**/*"],
+  },
   turbopack: {
     rules: {
       "*.css": {

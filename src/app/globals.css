@@ -1,26 +1,170 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Pytech Hub tokens — palette taken from the course flyers (navy + gold) */
+@theme {
+  --color-navy-950: #040e2b;
+  --color-navy-900: #071845;
+  --color-navy-800: #0c2663;
+  --color-navy-700: #173580;
+  --color-navy-100: #dfe6f7;
+  --color-navy-50: #f1f4fb;
+
+  --color-gold-500: #ffb703;
+  --color-gold-400: #ffc633;
+  --color-gold-600: #e6a200;
+  --color-gold-100: #fff1c7;
+
+  --color-paper: #ffffff;
+  --color-ink: #071845;
+  --color-ink-muted: #4a5878;
+
+  --radius-card: 1.25rem;
+  --shadow-card: 0 1px 2px rgb(7 24 69 / 0.06), 0 12px 32px -12px rgb(7 24 69 / 0.18);
+  --shadow-pop: 0 2px 4px rgb(7 24 69 / 0.1), 0 24px 48px -16px rgb(7 24 69 / 0.35);
+
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-display: var(--font-bebas), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", Menlo, monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@utility animate-rise {
+  animation: rise 0.6s ease-out both;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+@utility animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-rise,
+  .animate-float,
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+/* Rich text — shared by the dashboard's TipTap editor and the rendered blog posts */
+.rich-text {
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.rich-text > * + * {
+  margin-top: 0.75em;
+}
+
+.rich-text img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.rich-text h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.rich-text h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-navy-900);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.rich-text ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.rich-text ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+
+.rich-text blockquote {
+  border-left: 4px solid var(--color-gold-500);
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.rich-text a {
+  color: var(--color-gold-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.rich-text strong {
+  font-weight: 600;
+  color: var(--color-navy-900);
+}
+
+.rich-text hr {
+  margin: 1.5rem 0;
+  border-color: var(--color-navy-100);
+}
+
+.rich-text p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: var(--color-ink-muted);
+  opacity: 0.6;
+  float: left;
+  height: 0;
+  pointer-events: none;
 }

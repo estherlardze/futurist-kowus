@@ -1,0 +1,41 @@
+[
+  {
+    "id": "seed-1",
+    "slug": "why-workers-rights-still-matter",
+    "title": "Why Workers' Rights Still Matter",
+    "excerpt": "Three decades in trade unionism have taught me that dignity at work is the foundation of a just society.",
+    "category": "Trade Unionism",
+    "image": "/images/m4.jpeg",
+    "author": "Daniel Owusu-Koranteng",
+    "publishedAt": "2026-03-12",
+    "readTime": 4,
+    "status": "published",
+    "content": "<p>Over three decades of service in the Maritime and Dockworkers' Union, I have seen how fair conditions of work change the lives of entire families.</p><p>Workers' rights are not a privilege handed down from above. They are won through organisation, dialogue and a shared belief that every person deserves dignity.</p><p>As we face a changing economy, the work of organised labour is more important than ever: protecting jobs, ensuring fair pay and giving workers a voice in decisions that affect them.</p>"
+  },
+  {
+    "id": "seed-2",
+    "slug": "mining-communities-and-environmental-justice",
+    "title": "Mining Communities and Environmental Justice",
+    "excerpt": "What Wacam has learned from standing with communities affected by irresponsible mining.",
+    "category": "Environment",
+    "image": "/images/m2.jpeg",
+    "author": "Daniel Owusu-Koranteng",
+    "publishedAt": "2026-02-20",
+    "readTime": 5,
+    "status": "published",
+    "content": "<p>When Wacam was founded in 1998, the goal was simple: to ensure that communities affected by mining are heard and protected.</p><p>Environmental justice means that those who bear the cost of extraction must also have a say in how it is carried out, and a fair share of its benefits.</p><p>Our experience shows that lasting change comes from patient community organising, legal advocacy and holding institutions accountable.</p>"
+  },
+  {
+    "id": "seed-3",
+    "slug": "the-case-for-alternative-dispute-resolution",
+    "title": "The Case for Alternative Dispute Resolution",
+    "excerpt": "Mediation and arbitration can make justice faster, cheaper and more accessible for ordinary Ghanaians.",
+    "category": "ADR",
+    "image": "/images/m3.jpeg",
+    "author": "Daniel Owusu-Koranteng",
+    "publishedAt": "2026-01-15",
+    "readTime": 4,
+    "status": "published",
+    "content": "<p>Court cases can take years. For many people, that delay is itself a form of injustice.</p><p>Alternative Dispute Resolution offers a way for parties to resolve conflicts through dialogue, with the help of trained practitioners, while preserving relationships.</p><p>As President of the Ghana National Association of ADR Practitioners, I am committed to making these tools better known and more widely available.</p>"
+  }
+]

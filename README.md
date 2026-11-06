@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Futurist Kowus
 
-## Getting Started
+Website for Dr. Futurist Daniel Owusu-Koranteng, built with [Next.js](https://nextjs.org) 16 (App Router), React 19 and Tailwind CSS 4. It has a public site and a password-protected dashboard for writing blog articles. There is no database.
 
-First, run the development server:
+## Pages
+
+| Route | What it is |
+|---|---|
+| `/` | Home |
+| `/about` | About |
+| `/blogs` | Article list |
+| `/blogs/[slug]` | Article page |
+| `/contact` | Contact |
+| `/admin` | Dashboard: create, edit and delete articles, upload images |
+
+## Getting started
 
 ```bash
+npm install
+cp .env.example .env.local   # then edit the values
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The dashboard login is at `/admin/login`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Other scripts: `npm run build`, `npm start`, `npm run lint`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> This project uses a version of Next.js with breaking changes. See `AGENTS.md` and `node_modules/next/dist/docs/` before changing framework-level code.
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Required | Purpose |
+|---|---|---|
+| `ADMIN_USERNAME` | Yes | Dashboard username |
+| `ADMIN_PASSWORD` | Yes | Dashboard password |
+| `ADMIN_SECRET` | Yes | 16+ random characters, used to sign the login cookie |
+| `GITHUB_TOKEN` | On Vercel | Fine-grained token with Repository > Contents: Read and write |
+| `GITHUB_REPO` | On Vercel | `owner/name` of this repository |
+| `GITHUB_BRANCH` | No | Branch to commit to (default `main`) |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Restart the dev server after changing `.env.local`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How content is stored
 
-## Deploy on Vercel
+- Articles live in `content/blogs.json`.
+- Uploaded images live in `content/uploads/` and are served from `/api/uploads/<uuid>.<ext>`.
+- Uploads accept JPG, PNG and WebP, up to 4MB.
+- Static site images (hero, team, gallery) are in `public/images/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Where the dashboard saves depends on the environment:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Locally (no `GITHUB_TOKEN` / `GITHUB_REPO`):** it writes straight to the `content/` folder.
+- **On Vercel:** the disk is read-only, so the dashboard commits to your GitHub repo through the GitHub API. Vercel then redeploys from the push. Without the GitHub variables, saving and uploading fail with "Saving isn't set up on this host yet".
+
+Visitors read the copy bundled with the deployed site, so new articles and images appear publicly only after the redeploy finishes. The dashboard always reads the newest copy.
+
+## Project structure
+
+```
+content/            blogs.json and uploads (the "database")
+public/images/      static images
+src/app/(site)/     public pages
+src/app/admin/      login and dashboard
+src/app/api/        login, logout, blog CRUD, upload, image serving
+src/components/     UI grouped by page (home, about, blog, contact, layout, admin)
+src/lib/            site config, auth, blog storage, GitHub client
+```
+
+Edit contact details and nav links in `src/lib/site.ts`.
+
+## Deploying to Vercel
+
+1. Import the repository in Vercel.
+2. Add all the environment variables above, including the three GitHub ones.
+3. Deploy. Each article or image saved from the dashboard creates a commit and triggers a new deploy.

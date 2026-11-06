@@ -58,13 +58,13 @@ function BuyModal({ book, onClose }: { book: Book; onClose: () => void }) {
             <p className="mb-1 font-semibold text-navy-900">Want a copy? Contact us to buy.</p>
             <p className="mb-4 text-sm text-ink-muted">Call or message us and we will arrange your order and delivery.</p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <a href={`tel:${site.phone}`} className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gold-500 px-5 py-3 font-semibold text-navy-950 hover:bg-gold-400">
+              <a href={`tel:${site.phone}`} className="inline-flex flex-auto items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gold-500 px-5 py-3 font-semibold text-navy-950 hover:bg-gold-400">
                 <Phone className="h-4 w-4" /> {site.phoneDisplay}
               </a>
-              <a href={`https://wa.me/${site.whatsapp}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-navy-900 px-5 py-3 font-semibold text-white hover:bg-navy-800">
+              <a href={`https://wa.me/${site.whatsapp}?text=${msg}`} target="_blank" rel="noopener noreferrer" className="inline-flex flex-auto items-center justify-center gap-2 whitespace-nowrap rounded-full bg-navy-900 px-5 py-3 font-semibold text-white hover:bg-navy-800">
                 <MessageCircle className="h-4 w-4" /> WhatsApp
               </a>
-              <a href={`mailto:${site.email}?subject=${encodeURIComponent(`Order: ${book.title}`)}`} className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-navy-100 px-5 py-3 font-semibold text-navy-900 hover:bg-white">
+              <a href={`mailto:${site.email}?subject=${encodeURIComponent(`Order: ${book.title}`)}`} className="inline-flex flex-auto items-center justify-center gap-2 whitespace-nowrap rounded-full border border-navy-100 px-5 py-3 font-semibold text-navy-900 hover:bg-white">
                 <Mail className="h-4 w-4" /> Email
               </a>
             </div>

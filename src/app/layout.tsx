@@ -8,7 +8,7 @@ const playfair = Playfair_Display({ variable: "--font-playfair", subsets: ["lati
 
 const siteUrl =
   process.env.NODE_ENV === "production"
-    ? "https://futuristkowus.com"
+    ? "https://www.futuristkowus.com"
     : "http://localhost:3000";
 
 const title = "Dr. Futurist Daniel Owusu-Koranteng";

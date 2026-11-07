@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Download, Share, X } from "lucide-react";
+import { Download, PlusSquare, Share, X } from "lucide-react";
 
 type InstallEvent = Event & {
   prompt: () => Promise<void>;
@@ -25,6 +25,7 @@ export default function InstallPrompt() {
   const [event, setEvent] = useState<InstallEvent | null>(null);
   const [ios, setIos] = useState(false);
   const [visible, setVisible] = useState(false);
+  const [showSteps, setShowSteps] = useState(false);
 
   useEffect(() => {
     const standalone =
@@ -103,27 +104,37 @@ export default function InstallPrompt() {
         <div className="min-w-0">
           <p className="font-semibold text-gold-400">Install Futurist Kowus</p>
           {ios ? (
-            <p className="mt-1 text-sm text-white/80">
-              Tap <Share size={14} className="mx-0.5 inline -translate-y-px" aria-label="Share" /> then{" "}
-              <strong>Add to Home Screen</strong> to get the app.
-            </p>
+            <p className="mt-1 text-sm text-white/80">Add the app to your home screen for quick access and updates.</p>
           ) : (
-            <p className="mt-1 text-sm text-white/80">Add the app to your phone for quick access and updates.</p>
+            <p className="mt-1 text-sm text-white/80">Add the app to your device for quick access and updates.</p>
           )}
         </div>
       </div>
-      {!ios && (
-        <div className="mt-3 flex gap-2">
-          <button
-            onClick={install}
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-md bg-gold-500 px-4 py-2 text-sm font-bold text-navy-900 hover:bg-gold-400"
-          >
-            <Download size={16} /> Install app
-          </button>
-          <button onClick={dismiss} className="rounded-md px-4 py-2 text-sm text-white/70 hover:text-white">
-            Not now
-          </button>
-        </div>
+      <div className="mt-3 flex gap-2">
+        <button
+          onClick={ios ? () => setShowSteps((v) => !v) : install}
+          className="inline-flex flex-1 items-center justify-center gap-2 rounded-md bg-gold-500 px-4 py-2 text-sm font-bold text-navy-900 hover:bg-gold-400"
+        >
+          <Download size={16} /> Install app
+        </button>
+        <button onClick={dismiss} className="rounded-md px-4 py-2 text-sm text-white/70 hover:text-white">
+          Not now
+        </button>
+      </div>
+      {ios && showSteps && (
+        <ol className="mt-3 space-y-2 rounded-lg bg-white/10 p-3 text-sm text-white/90">
+          <li className="flex items-center gap-2">
+            <span className="font-bold text-gold-400">1.</span> Tap the
+            <Share size={16} className="text-gold-400" aria-label="Share" /> Share button in Safari&apos;s bar
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="font-bold text-gold-400">2.</span> Scroll and tap
+            <PlusSquare size={16} className="text-gold-400" /> <strong>Add to Home Screen</strong>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="font-bold text-gold-400">3.</span> Tap <strong>Add</strong> - done!
+          </li>
+        </ol>
       )}
     </div>
   );

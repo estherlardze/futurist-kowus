@@ -7,10 +7,9 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const playfair = Playfair_Display({ variable: "--font-playfair", subsets: ["latin"] });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000");
+  process.env.NODE_ENV === "production"
+    ? "https://futuristkowus.com"
+    : "http://localhost:3000";
 
 const title = "Dr. Futurist Daniel Owusu-Koranteng";
 const description =

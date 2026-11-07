@@ -35,9 +35,11 @@ export function Navbar() {
     };
   }, [open]);
 
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`));
+
   const linkClass = (href: string) =>
-    `text-sm font-medium transition-colors hover:text-navy-900 ${
-      pathname === href ? "text-navy-900 font-semibold" : "text-ink/70"
+    `border-b-2 py-1 text-sm transition-colors hover:text-navy-900 ${
+      isActive(href) ? "border-gold-500 font-bold text-navy-900" : "border-transparent font-medium text-ink/60"
     }`;
 
   return (
@@ -116,7 +118,7 @@ export function Navbar() {
 
           <nav className="flex flex-1 flex-col gap-1 px-4 pt-6">
             {navLinks.map((l, i) => {
-              const active = pathname === l.href;
+              const active = isActive(l.href);
               return (
                 <Link
                   key={l.href}

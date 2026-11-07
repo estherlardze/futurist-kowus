@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { navLinks, site } from "@/lib/site";
+import { ScrollToTop } from "./scroll-to-top";
 
 export function Footer() {
   return (
@@ -46,12 +47,13 @@ export function Footer() {
           <p>© 2026 Futurist Kowus. All rights reserved.</p>
           <p>
             Website Designed by{" "}
-            <a href="https://sleekteqsolutions.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            <a href="https://sleekteqsolutions.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-gold-400 underline underline-offset-4 transition-colors hover:text-white">
               Sleekteq Solutions
             </a>
           </p>
         </div>
       </div>
+      <ScrollToTop />
     </footer>
   );
 }

@@ -30,7 +30,7 @@ export function ContactForm() {
   const err = (k: string) => errors[k] && <p className="mt-1 text-xs text-red-600">{errors[k]}</p>;
 
   return (
-    <form onSubmit={onSubmit} noValidate className="space-y-5 rounded-2xl border border-navy-100 bg-white p-8 shadow-card">
+    <form onSubmit={onSubmit} noValidate className="space-y-5 rounded-2xl border border-navy-100 bg-white p-8">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1 block text-sm font-medium">Full name</label>

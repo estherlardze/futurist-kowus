@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import PwaRegister from "@/components/pwa-register";
+import InstallPrompt from "@/components/install-prompt";
 
 const bebas = Bebas_Neue({ variable: "--font-bebas", subsets: ["latin"], weight: "400" });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-screen flex flex-col">
         {children}
         <PwaRegister />
+        <InstallPrompt />
       </body>
     </html>
   );

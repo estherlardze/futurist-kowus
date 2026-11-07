@@ -6,10 +6,28 @@ const bebas = Bebas_Neue({ variable: "--font-bebas", subsets: ["latin"], weight:
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const playfair = Playfair_Display({ variable: "--font-playfair", subsets: ["latin"] });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
+const title = "Dr. Futurist Daniel Owusu-Koranteng";
+const description =
+  "The official website of Dr. Futurist Daniel Owusu-Koranteng - award-winning author, Executive Director of Wacam, President of Ghana's National Association of ADR Practitioners, and champion of human rights and environmental justice across Africa.";
+
 export const metadata: Metadata = {
-  title: "Dr. Futurist Daniel Owusu-Koranteng",
-  description:
-    "The official website of Dr. Futurist Daniel Owusu-Koranteng - award-winning author, Executive Director of Wacam, President of Ghana's National Association of ADR Practitioners, and champion of human rights and environmental justice across Africa.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    siteName: title,
+    type: "website",
+    locale: "en_GB",
+  },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

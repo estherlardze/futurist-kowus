@@ -10,7 +10,14 @@ import { BlogCard } from "@/components/blog/blog-card";
 export async function generateMetadata({ params }: PageProps<"/blogs/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPublishedBlogBySlug(slug);
-  return post ? { title: post.title, description: post.excerpt } : {};
+  if (!post) return {};
+  const images = post.image ? [post.image] : undefined; // falls back to the site OG image
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: { title: post.title, description: post.excerpt, type: "article", publishedTime: post.publishedAt, authors: [post.author], images },
+    twitter: { card: "summary_large_image", title: post.title, description: post.excerpt, images },
+  };
 }
 
 export default async function ArticlePage({ params }: PageProps<"/blogs/[slug]">) {

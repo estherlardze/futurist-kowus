@@ -1,6 +1,6 @@
 # Futurist Kowus
 
-Website for Dr. Futurist Daniel Owusu-Koranteng, built with [Next.js](https://nextjs.org) 16 (App Router), React 19 and Tailwind CSS 4. It has a public site and a password-protected dashboard for writing blog articles. There is no database.
+Website for Futurist Daniel Owusu-Koranteng, built with [Next.js](https://nextjs.org) 16 (App Router), React 19 and Tailwind CSS 4. It has a public site and a password-protected dashboard for writing blog articles. There is no database.
 
 ## Pages
 

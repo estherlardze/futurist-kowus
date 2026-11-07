@@ -11,9 +11,9 @@ const siteUrl =
     ? "https://www.futuristkowus.com"
     : "http://localhost:3000";
 
-const title = "Dr. Futurist Daniel Owusu-Koranteng";
+const title = "Futurist Daniel Owusu-Koranteng";
 const description =
-  "The official website of Dr. Futurist Daniel Owusu-Koranteng - award-winning author, Executive Director of Wacam, President of Ghana's National Association of ADR Practitioners, and champion of human rights and environmental justice across Africa.";
+  "The official website of Futurist Daniel Owusu-Koranteng - award-winning author, Executive Director of Wacam, President of Ghana's National Association of ADR Practitioners, and champion of human rights and environmental justice across Africa.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

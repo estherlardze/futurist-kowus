@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { BlogList } from "@/components/blog/blog-list";
 import { getPublishedBlogs } from "@/lib/blog-store";
 
-export const metadata: Metadata = { title: "Blogs | Dr. Futurist Daniel Owusu-Koranteng" };
+export const metadata: Metadata = { title: "Blogs | Futurist Daniel Owusu-Koranteng" };
 
 export default async function BlogsPage() {
   const posts = await getPublishedBlogs();

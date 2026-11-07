@@ -15,7 +15,7 @@ export function Hero() {
         <div className="animate-rise max-w-2xl space-y-6">
           <p className="text-sm font-semibold tracking-widest text-gold-500">Author · Activist · ADR Practitioner</p>
           <h1 className="font-serif text-5xl font-bold leading-[1.1] text-white md:text-6xl">
-            Dr. Futurist <span className="text-gold-500">Daniel</span>
+            Futurist <span className="text-gold-500">Daniel</span>
             <br />
             Owusu-Koranteng
           </h1>

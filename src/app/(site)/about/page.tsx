@@ -5,7 +5,7 @@ import { achievements, expertise, timeline } from "@/lib/about-data";
 import { familyGallery } from "@/lib/gallery";
 import { SectionHeading } from "@/components/layout/section-heading";
 
-export const metadata: Metadata = { title: "About | Dr. Futurist Daniel Owusu-Koranteng" };
+export const metadata: Metadata = { title: "About | Futurist Daniel Owusu-Koranteng" };
 
 export default function AboutPage() {
   return (

@@ -3,7 +3,7 @@ import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { site } from "@/lib/site";
 import { ContactForm } from "@/components/contact/contact-form";
 
-export const metadata: Metadata = { title: "Contact | Dr. Futurist Daniel Owusu-Koranteng" };
+export const metadata: Metadata = { title: "Contact | Futurist Daniel Owusu-Koranteng" };
 
 const info = [
   { icon: Phone, label: "Call to order books", value: site.phoneDisplay, href: `tel:${site.phone}` },

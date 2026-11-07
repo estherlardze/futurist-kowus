@@ -25,7 +25,7 @@ export function AboutTeaser() {
           <div className="space-y-4 pt-4">
             <div className="flex items-center gap-3">
               <div className="h-px w-8 bg-gold-500" />
-              <span className="text-sm font-semibold uppercase tracking-widest text-gold-600">About Dr. Daniel</span>
+              <span className="text-sm font-semibold uppercase tracking-widest text-gold-600">About Daniel</span>
             </div>
             <h2 className="font-serif text-4xl font-bold leading-tight text-navy-900">
               A Life Dedicated to <span className="text-gold-600">Justice &amp; Service</span>

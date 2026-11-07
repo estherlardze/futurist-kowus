@@ -23,7 +23,7 @@ export default async function BlogsPage() {
             </h1>
             <p className="text-xl leading-relaxed text-white/90">
               Perspectives on human rights, environmental justice, trade unionism, and alternative dispute resolution
-              from Dr. Daniel Owusu-Koranteng.
+              from Daniel Owusu-Koranteng.
             </p>
           </div>
         </div>

@@ -21,7 +21,7 @@ export default function ContactPage() {
             Get in <span className="text-gold-500">Touch</span>
           </h1>
           <p className="text-lg text-white/80">
-            Want to buy a book, invite Dr. Daniel to speak, or send a question? Call or message us and we will get back
+            Want to buy a book, invite Daniel to speak, or send a question? Call or message us and we will get back
             to you.
           </p>
         </div>

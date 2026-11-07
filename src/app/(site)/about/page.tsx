@@ -141,7 +141,7 @@ export default function AboutPage() {
                     <p>
                       Hannah Owusu-Koranteng is an accomplished environmentalist, human rights advocate, and Associate
                       Executive Director of the Wassa Association of Communities Affected by Mining (WACAM) - the
-                      Ghana-based civil society organization she co-founded with her husband, Dr. Daniel
+                      Ghana-based civil society organization she co-founded with her husband, Daniel
                       Owusu-Koranteng. She has dedicated much of her life to supporting mining-affected communities and
                       strengthening environmental protection, community rights, and governance accountability in
                       Ghana&apos;s extractive sector.

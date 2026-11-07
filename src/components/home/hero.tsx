@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden bg-navy-900">
       <div className="absolute right-0 top-0 hidden h-full w-1/2 lg:block">
-        <Image src="/images/hero.jpeg" alt="Dr. Daniel Owusu-Koranteng" fill priority className="object-cover object-top" />
+        <Image src="/images/hero.jpeg" alt=" Daniel Owusu-Koranteng" fill priority className="object-cover object-top" />
         <div className="absolute inset-0 bg-linear-to-r from-navy-900 via-navy-900/60 to-navy-900/10" />
         <div className="absolute inset-0 bg-linear-to-t from-navy-900/50 via-transparent to-transparent" />
       </div>
@@ -26,7 +26,7 @@ export function Hero() {
             Regulatory Commission.
           </p>
           <p className="text-lg leading-relaxed text-white/80">
-            For over three decades, Dr. Daniel has dedicated his life to protecting mining communities, advancing
+            For over three decades, Daniel has dedicated his life to protecting mining communities, advancing
             workers&rsquo; rights, and building a more just and sustainable Africa through law, literature, and
             relentless advocacy.
           </p>

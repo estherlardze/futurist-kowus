@@ -48,7 +48,7 @@ export async function getTextFile(path: string): Promise<{ text: string; sha: st
   if (data.encoding === "base64" && typeof data.content === "string") {
     return { text: Buffer.from(data.content, "base64").toString("utf8"), sha: data.sha };
   }
-  // Files over 1MB come back without inline content — fetch the raw bytes instead
+  // Files over 1MB come back without inline content - fetch the raw bytes instead
   const raw = await fetch(`${url(path)}?ref=${encodeURIComponent(branch)}`, {
     headers: headers("application/vnd.github.raw+json"),
     cache: "no-store",

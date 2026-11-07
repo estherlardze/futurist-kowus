@@ -42,7 +42,7 @@ async function readLocal(): Promise<BlogPost[]> {
   }
 }
 
-/** Newest copy — used by the dashboard and before every write. */
+/** Newest copy - used by the dashboard and before every write. */
 async function readLatest(): Promise<{ posts: BlogPost[]; sha?: string }> {
   if (githubEnabled) {
     const file = await getTextFile(BLOGS_REPO_PATH);

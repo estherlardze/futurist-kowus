@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Pytech Hub tokens — palette taken from the course flyers (navy + gold) */
+/* Pytech Hub tokens - palette taken from the course flyers (navy + gold) */
 @theme {
   --color-navy-950: #040e2b;
   --color-navy-900: #071845;
@@ -93,7 +93,7 @@ body {
   }
 }
 
-/* Rich text — shared by the dashboard's TipTap editor and the rendered blog posts */
+/* Rich text - shared by the dashboard's TipTap editor and the rendered blog posts */
 .rich-text {
   line-height: 1.75;
   overflow-wrap: anywhere;

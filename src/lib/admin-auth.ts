@@ -19,12 +19,12 @@ function safeEqual(a: string, b: string) {
   return x.length === y.length && timingSafeEqual(x, y);
 }
 
-/** Credentials live in .env.local — never in the browser bundle or a database. */
+/** Credentials live in .env.local - never in the browser bundle or a database. */
 export function isLoginConfigured() {
   return Boolean(process.env.ADMIN_USERNAME && process.env.ADMIN_PASSWORD && process.env.ADMIN_SECRET);
 }
 
-/** The ONLY accepted password is ADMIN_PASSWORD from the environment — no defaults or fallbacks. */
+/** The ONLY accepted password is ADMIN_PASSWORD from the environment - no defaults or fallbacks. */
 export function checkCredentials(username: string, password: string) {
   const u = process.env.ADMIN_USERNAME;
   const p = process.env.ADMIN_PASSWORD;

@@ -80,7 +80,7 @@ export function Navbar() {
         </nav>
       </header>
 
-      {/* Mobile drawer — outside the header so the header's blur doesn't clip it */}
+      {/* Mobile drawer - outside the header so the header's blur doesn't clip it */}
       <div className={`fixed inset-0 z-50 md:hidden ${open ? "" : "pointer-events-none"}`} aria-hidden={!open}>
         {/* Dim backdrop fades in */}
         <div

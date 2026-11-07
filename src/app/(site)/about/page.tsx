@@ -42,7 +42,7 @@ export default function AboutPage() {
                 <h3 className="font-serif text-3xl font-bold text-navy-900">Roots &amp; Early Years</h3>
                 <div className="space-y-2 leading-relaxed text-ink-muted md:text-lg">
                   <p>
-                    Born into the Asona Royal Family of Akropong Akuapem with roots in Obom—a military settlement of
+                    Born into the Asona Royal Family of Akropong Akuapem with roots in Obom-a military settlement of
                     Akyem Warriors. Daniel&apos;s heritage is steeped in history and courage. His early years were
                     marked by a profound loss: the death of his father, Rev. Jacob Asiedu Koranteng, a Presbyterian
                     Church Minister, when Daniel was just nine years old.
@@ -79,7 +79,7 @@ export default function AboutPage() {
                   “I share the view of CNN that I am a man of many Missions because I have to perform many missions in
                   order to pay my heavy debt owed to society, nature and many people.”
                 </p>
-                <footer className="text-lg font-semibold text-ink-muted">— Daniel Owusu-Koranteng</footer>
+                <footer className="text-lg font-semibold text-ink-muted">- Daniel Owusu-Koranteng</footer>
               </blockquote>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function AboutPage() {
             eyebrow="Journey"
             title="Career"
             highlight="Milestones"
-            text="Three decades of service to workers, communities, and the environment—a journey of unwavering commitment to justice and human dignity."
+            text="Three decades of service to workers, communities, and the environment-a journey of unwavering commitment to justice and human dignity."
           />
           <div className="relative mx-auto max-w-4xl">
             <div className="absolute bottom-0 left-1/2 top-0 hidden w-0.5 bg-gold-500/30 md:block" aria-hidden="true" />
@@ -140,7 +140,7 @@ export default function AboutPage() {
                   <div className="space-y-4 leading-relaxed text-ink-muted sm:text-lg">
                     <p>
                       Hannah Owusu-Koranteng is an accomplished environmentalist, human rights advocate, and Associate
-                      Executive Director of the Wassa Association of Communities Affected by Mining (WACAM) — the
+                      Executive Director of the Wassa Association of Communities Affected by Mining (WACAM) - the
                       Ghana-based civil society organization she co-founded with her husband, Dr. Daniel
                       Owusu-Koranteng. She has dedicated much of her life to supporting mining-affected communities and
                       strengthening environmental protection, community rights, and governance accountability in
@@ -155,7 +155,7 @@ export default function AboutPage() {
                     </p>
                     <p>
                       Because of her leadership in environmental and community rights advocacy, Hannah has received
-                      international recognition — notably the “Right the Wrong” Award from Oxfam America, presented in
+                      international recognition - notably the “Right the Wrong” Award from Oxfam America, presented in
                       Boston for her work empowering women and marginalized mining communities, and the Abena Korantemaa
                       Oral History Prize for her contributions to indigenous rights storytelling and grassroots
                       empowerment.
@@ -170,13 +170,13 @@ export default function AboutPage() {
                 <div className="order-1 lg:order-2">
                   <div className="relative hidden h-[31rem] w-full sm:block md:h-[43.75rem]">
                     <div className="absolute right-0 top-0 h-[52%] w-[65%] overflow-hidden rounded-[2rem] border-4 border-white shadow-lg">
-                      <Image src="/images/han.jpeg" alt="Hannah Owusu-Koranteng" fill sizes="30vw" className="object-cover" />
+                      <Image src="/images/mum1.jpg" alt="Hannah Owusu-Koranteng" fill sizes="30vw" className="object-cover" />
                     </div>
                     <div className="absolute left-0 top-[28%] z-10 h-[50%] w-[55%] overflow-hidden rounded-[2rem] border-4 border-white shadow-lg">
-                      <Image src="/images/hannah.jpeg" alt="Hannah Owusu-Koranteng" fill sizes="30vw" className="object-cover" />
+                      <Image src="/images/mum3.jpg" alt="Hannah Owusu-Koranteng" fill sizes="30vw" className="object-cover" />
                     </div>
                     <div className="absolute -bottom-10 right-[5%] h-[52%] w-[60%] overflow-hidden rounded-[2rem] border-4 border-white shadow-lg">
-                      <Image src="/images/hannah.jpeg" alt="Hannah Owusu-Koranteng" fill sizes="30vw" className="object-cover" />
+                      <Image src="/images/han.jpeg" alt="Hannah Owusu-Koranteng" fill sizes="30vw" className="object-cover" />
                     </div>
                   </div>
                   <div className="relative aspect-square w-full overflow-hidden rounded-[2rem] border-4 border-white shadow-lg sm:hidden">
@@ -239,13 +239,13 @@ export default function AboutPage() {
       </section>
 
       {/* Expertise */}
-      <section className="bg-gold-100 py-24">
+      <section className="bg-gold-100/60 py-24">
         <div className="mx-auto max-w-7xl px-6">
           <SectionHeading
             eyebrow="Expertise"
             title="Areas of"
             highlight="Competence"
-            text="Multi-disciplinary expertise spanning agriculture, labor rights, environmental justice, and conflict resolution—all dedicated to empowering vulnerable communities."
+            text="Multi-disciplinary expertise spanning agriculture, labor rights, environmental justice, and conflict resolution-all dedicated to empowering vulnerable communities."
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {expertise.map((item) => (

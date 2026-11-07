@@ -4,7 +4,7 @@ const TYPES: Record<string, string> = { jpg: "image/jpeg", png: "image/png", web
 
 export async function GET(_req: Request, ctx: RouteContext<"/api/uploads/[name]">) {
   const { name } = await ctx.params;
-  // Only plain uuid.ext names — blocks path traversal
+  // Only plain uuid.ext names - blocks path traversal
   if (!/^[0-9a-f-]{36}\.(jpg|png|webp)$/.test(name)) return new Response("Not found", { status: 404 });
   try {
     const data = await readUpload(name);

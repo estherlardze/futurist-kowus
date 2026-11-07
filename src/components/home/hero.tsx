@@ -22,7 +22,7 @@ export function Hero() {
           <p className="text-lg leading-relaxed text-white/80">
             Award-winning author, co-founder and Executive Director of Wacam, and President of Ghana&rsquo;s National
             Association of ADR Practitioners. A man who rose from humble beginnings to represent Africa on the world
-            stage — from the ITF Dockers Steering Committee in Geneva to the halls of Ghana&rsquo;s Public Utilities
+            stage - from the ITF Dockers Steering Committee in Geneva to the halls of Ghana&rsquo;s Public Utilities
             Regulatory Commission.
           </p>
           <p className="text-lg leading-relaxed text-white/80">

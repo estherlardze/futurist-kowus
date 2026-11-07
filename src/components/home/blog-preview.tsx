@@ -21,7 +21,7 @@ export async function BlogPreview() {
           </Link>
         </div>
         {posts.length === 0 ? (
-          <p className="py-12 text-center text-ink-muted">No articles yet — check back soon.</p>
+          <p className="py-12 text-center text-ink-muted">No articles yet - check back soon.</p>
         ) : (
           <div className="grid gap-8 md:grid-cols-3">
             {posts.map((p) => (

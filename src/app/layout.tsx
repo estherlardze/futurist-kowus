@@ -9,7 +9,7 @@ const playfair = Playfair_Display({ variable: "--font-playfair", subsets: ["lati
 export const metadata: Metadata = {
   title: "Dr. Futurist Daniel Owusu-Koranteng",
   description:
-    "The official website of Dr. Futurist Daniel Owusu-Koranteng — award-winning author, Executive Director of Wacam, President of Ghana's National Association of ADR Practitioners, and champion of human rights and environmental justice across Africa.",
+    "The official website of Dr. Futurist Daniel Owusu-Koranteng - award-winning author, Executive Director of Wacam, President of Ghana's National Association of ADR Practitioners, and champion of human rights and environmental justice across Africa.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
